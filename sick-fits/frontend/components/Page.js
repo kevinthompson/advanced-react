@@ -8,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style: normal;
   }
-
   html {
     --red: #ff0000;
     --black: #393939;
@@ -19,14 +18,12 @@ const GlobalStyles = createGlobalStyle`
     --offWhite: #ededed;
     --maxWidth: 1000px;
     --bs: 0 12px 24px 0 rgba(0,0,0,0.09);
-    --font: 'radnika_next',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     box-sizing: border-box;
+    font-size: 10px;
   }
-
-  *,*::before, *::after {
+  *, *:before, *:after {
     box-sizing: inherit;
   }
-
   body {
     font-family: var(--font);
     padding: 0;
@@ -34,16 +31,13 @@ const GlobalStyles = createGlobalStyle`
     font-size: 1.5rem;
     line-height:2;
   }
-
   a {
     text-decoration: none;
     color: var(--black);
   }
-
   a:hover {
     text-decoration: underline;
   }
-
   button {
     font-family: var(--font);
   }

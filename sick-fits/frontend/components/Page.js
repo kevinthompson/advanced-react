@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 
@@ -11,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   html {
     --red: #ff0000;
     --black: #393939;
-    --grey: #3a3a3a;
+    --grey: #3A3A3A;
     --gray: var(--grey);
     --lightGrey: #e1e1e1;
     --lightGray: var(--lightGrey);
@@ -25,7 +26,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
   body {
-    font-family: var(--font);
+    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
@@ -39,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: underline;
   }
   button {
-    font-family: var(--font);
+    font-family: 'radnika_next', --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 
@@ -49,7 +50,7 @@ const InnerStyles = styled.div`
   padding: 2rem;
 `;
 
-function Page({ children }) {
+export default function Page({ children, cool }) {
   return (
     <div>
       <GlobalStyles />
@@ -59,4 +60,7 @@ function Page({ children }) {
   );
 }
 
-export default Page;
+Page.propTypes = {
+  cool: PropTypes.string,
+  children: PropTypes.any,
+};
